@@ -185,6 +185,13 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   }
 
+  /* Archivements */
+  .MaharajAchievementCelebration--achievement-celebration--ouMf5 {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+  }
+
   /* Avatar */
   .EntryHeader--icon-container--f6C3J {
     background-color: transparent;
