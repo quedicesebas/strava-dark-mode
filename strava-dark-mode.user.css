@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Strava Dark Mode
-@version      v0.0.3
+@version      v0.0.4
 @namespace    github.com/macx
 @description  Dark Mode for Strava on Desktop
 @author       macx
@@ -116,6 +116,11 @@
       var(--clr-bg--content),
       var(--clr-bg)
     );
+  }
+
+  /* User profile images*/
+  .EntryHeader--icon-container--f6C3J {
+    background-color: transparent;
   }
 
   /*
