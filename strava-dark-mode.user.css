@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Strava Dark Mode
-@version      v0.0.1
+@version      v0.0.2
 @namespace    github.com/macx
 @description  Dark Mode for Strava on Desktop
 @author       macx
@@ -15,10 +15,10 @@
   /* strava.com*/
 
   :root {
-    --clr-bg: #082032;
-    --clr-bg--content: #2c394b;
+    --clr-bg: #080c0f;
+    --clr-bg--content: #253640;
     --clr-primary: #fc5200;
-    --clr-text: #fff;
+    --clr-text: #f1f7fb;
   }
 
   body {
@@ -65,9 +65,20 @@
     color: var(--clr-text);
   }
 
+  .ActivityEntryBody--activity-entry-container--iYy-k
+    .ActivityEntryBody--activity-name--AGMA5
+    a.ActivityEntryBody--activity-name--AGMA5 {
+    color: var(--clr-text);
+  }
+
   .card,
   .Activity--card--GP9rq,
   .GroupActivity--card--oCRxr {
     background-color: var(--clr-bg--content);
+    background-image: linear-gradient(
+      to bottom,
+      var(--clr-bg--content),
+      var(--clr-bg)
+    );
   }
 }

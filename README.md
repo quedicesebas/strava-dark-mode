@@ -5,6 +5,8 @@
 
 Strava is the most famous platform for tracking running and cycling activities. Unlike others, the Apps are not providing a Dark Mode, they're just ignoring it for years. With this userstyle now you can apply it.
 
+Status Feb 2022: THIS IS WORK IN PROGRESS!
+
 ## Installation
 
 1. Install the browser extension Stylus for [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Firefox](https://addons.mozilla.org/en/firefox/addon/styl-us/), [Opera](https://addons.opera.com/en/extensions/details/stylus/) or Cascadea for [Safari](https://cascadea.app/) to apply this style.
@@ -16,7 +18,7 @@ With a so-called user styles, you can override the styles from the origin page w
 
 ## Features
 
-tbc
+TBA
 
 ## Contribute
 
