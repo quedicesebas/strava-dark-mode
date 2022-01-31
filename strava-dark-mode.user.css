@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Strava Dark Mode
-@version      v0.0.2
+@version      v0.0.3
 @namespace    github.com/macx
 @description  Dark Mode for Strava on Desktop
 @author       macx
@@ -15,10 +15,12 @@
   /* strava.com*/
 
   :root {
-    --clr-bg: #080c0f;
+    --clr-bg: #121b20;
     --clr-bg--content: #253640;
     --clr-primary: #fc5200;
     --clr-text: #f1f7fb;
+    --clr-text--light: #94a3b8;
+    --clr-text--medium: #64748b;
   }
 
   body {
@@ -33,11 +35,34 @@
   */
 
   #global-header {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-bg--content);
+    border-bottom: 0;
+    margin-top: 0;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  }
+
+  #global-header .nav-group .drop-down-menu .selection {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  #global-header .nav-bar .nav-link {
+    color: var(--clr-text--light);
+  }
+
+  .drop-down-menu a,
+  .drop-down-menu .clickable,
+  .dropdown a,
+  .dropdown .clickable {
+    color: var(--clr-text--light);
+  }
+
+  #global-header .nav-bar .selected .nav-link {
+    color: var(--clr-text);
   }
 
   .branding {
-    background-position: left center;
+    background-position: left top;
   }
 
   #global-search-bar .icon-search {
@@ -65,20 +90,53 @@
     color: var(--clr-text);
   }
 
+  .stat-subtext {
+    color: var(--clr-text--light);
+  }
+
   .ActivityEntryBody--activity-entry-container--iYy-k
     .ActivityEntryBody--activity-name--AGMA5
     a.ActivityEntryBody--activity-name--AGMA5 {
     color: var(--clr-text);
   }
 
+  .ActivityEntryBody--activity-entry-container--iYy-k
+    .ActivityEntryBody--stats--G90hq {
+    color: var(--clr-text--light);
+  }
+
   .card,
   .Activity--card--GP9rq,
-  .GroupActivity--card--oCRxr {
+  .GroupActivity--card--oCRxr,
+  .Card--card--8qT2W,
+  .AthleteJoinEntry--card---CeVY {
     background-color: var(--clr-bg--content);
     background-image: linear-gradient(
       to bottom,
       var(--clr-bg--content),
       var(--clr-bg)
     );
+  }
+
+  /*
+  ┌──────────────────────────────────┐
+    MAPS
+  └──────────────────────────────────┘
+  */
+
+  .PhotosAndMapImage--entry-images--M264M
+    .PhotosAndMapImage--entry-image-wrapper--LaoWz {
+    filter: inverse(100%);
+  }
+
+  /*
+  ┌──────────────────────────────────┐
+    MISC
+  └──────────────────────────────────┘
+  */
+
+  /* Menu Arrows*/
+  .app-icon.icon-dark {
+    background-position: 0 66.66666666%;
   }
 }
