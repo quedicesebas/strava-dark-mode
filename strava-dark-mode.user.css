@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Strava Dark Mode
-@version      v0.0.4
+@version      v0.0.5
 @namespace    github.com/macx
 @description  Dark Mode for Strava on Desktop
 @author       macx
@@ -53,8 +53,35 @@
   .drop-down-menu a,
   .drop-down-menu .clickable,
   .dropdown a,
-  .dropdown .clickable {
+  .dropdown .clickable,
+  .ActivityEntryBody--activity-entry-container--iYy-k
+    .ActivityEntryBody--achievements-summary--bsU2g
+    li
+    strong {
     color: var(--clr-text--light);
+  }
+
+  .LocationAndTime--subtitle-wrapper--6yH0n time,
+  .LocationAndTime--subtitle-wrapper--6yH0n .LocationAndTime--location--Djc4K,
+  .ActivityEntryBody--activity-entry-container--iYy-k
+    .ActivityEntryBody--stats--G90hq
+    .ActivityEntryBody--stat-label--47Ktd,
+  .ActivityEntryBody--activity-entry-container--iYy-k
+    .ActivityEntryBody--achievements-summary--bsU2g
+    li
+    a.ActivityEntryBody--achievements-link--CZvjJ,
+  .ActivityEntryBody--activity-entry-container--iYy-k
+    .ActivityEntryBody--achievements-summary--bsU2g,
+  .ActivityEntryBody--activity-entry-container--iYy-k
+    .ActivityEntryBody--stat-subtext--Vo0Ha,
+  .KudosAndComments--kudos-and-comments--RTN8b
+    .KudosAndComments--count-button--L2QfK,
+  .CommentsThread--comment--ryaZV time {
+    color: var(--clr-text--medium);
+  }
+
+  .CommentsThread--more-comments-button--MnE\+d {
+    color: var(--clr-text) !important;
   }
 
   #global-header .nav-bar .selected .nav-link {
@@ -67,6 +94,11 @@
 
   #global-search-bar .icon-search {
     background-position: left -46px;
+  }
+
+  /* Remove upgrade button 😧 */
+  .nav-item.upgrade {
+    display: none !important;
   }
 
   /*
@@ -96,7 +128,12 @@
 
   .ActivityEntryBody--activity-entry-container--iYy-k
     .ActivityEntryBody--activity-name--AGMA5
-    a.ActivityEntryBody--activity-name--AGMA5 {
+    a.ActivityEntryBody--activity-name--AGMA5,
+  .Activity--card--GP9rq a:not(.Activity--btn--0fOye):link,
+  .Activity--card--GP9rq a:not(.Activity--btn--0fOye):visited,
+  .Activity--card--GP9rq .Activity--btn--0fOye.Activity--btn-link--JK2Iw:link,
+  .Activity--card--GP9rq
+    .Activity--btn--0fOye.Activity--btn-link--JK2Iw:visited {
     color: var(--clr-text);
   }
 
@@ -118,9 +155,17 @@
     );
   }
 
-  /* User profile images*/
+  /* Avatar */
   .EntryHeader--icon-container--f6C3J {
     background-color: transparent;
+  }
+
+  .Avatar--badge--dPtDC path:first-child {
+    fill: var(--clr-bg);
+  }
+
+  .AvatarGroup--avatar--8ZPsx {
+    border-color: var(--clr-bg);
   }
 
   /*
