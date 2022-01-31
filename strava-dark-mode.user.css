@@ -1,0 +1,73 @@
+/* ==UserStyle==
+@name         Strava Dark Mode
+@version      v0.0.1
+@namespace    github.com/macx
+@description  Dark Mode for Strava on Desktop
+@author       macx
+@license      MIT
+@homepageURL  https://github.com/macx/strava-dark-mode
+@supportURL   https://github.com/macx/strava-dark-mode/issues
+@updateURL    https://raw.githubusercontent.com/macx/strava-dark-mode/main/strava-dark-mode.user.css
+
+==/UserStyle== */
+
+@-moz-document domain("strava.com") {
+  /* strava.com*/
+
+  :root {
+    --clr-bg: #082032;
+    --clr-bg--content: #2c394b;
+    --clr-primary: #fc5200;
+    --clr-text: #fff;
+  }
+
+  body {
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+  }
+
+  /*
+  ┌──────────────────────────────────┐
+    HEADER
+  └──────────────────────────────────┘
+  */
+
+  #global-header {
+    background-color: var(--clr-primary);
+  }
+
+  .branding {
+    background-position: left center;
+  }
+
+  #global-search-bar .icon-search {
+    background-position: left -46px;
+  }
+
+  /*
+  ┌──────────────────────────────────┐
+    CONTENT
+  └──────────────────────────────────┘
+  */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: var(--clr-text);
+  }
+
+  .card,
+  .Activity--card--GP9rq,
+  .GroupActivity--card--oCRxr {
+    background-color: var(--clr-bg--content);
+  }
+}
