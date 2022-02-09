@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Strava Dark Mode
-@version      v0.0.8
+@version      v0.1.0
 @namespace    github.com/macx
 @description  Dark Mode for Strava on Desktop
 @author       macx
@@ -23,6 +23,8 @@
     --clr-text--light: #94a3b8;
     --clr-text--medium: #64748b;
     --clr-navigation: #2e4450;
+
+    --clr-border: rgba(255, 255, 255, 0.2);
   }
 
   body {
@@ -61,8 +63,16 @@
     .ActivityEntryBody--achievements-summary--bsU2g
     li
     strong,
-  #global-header .nav-group .drop-down-menu .selection {
+  #global-header .nav-group .drop-down-menu .selection,
+  .drop-down-menu .opt-group.premium a:link,
+  .drop-down-menu .opt-group.premium a:visited {
     color: var(--clr-text--light);
+  }
+
+  .drop-down-menu .opt-group,
+  #global-header .nav-group .drop-down-menu:hover .nav-link,
+  #global-header .nav-group .drop-down-menu.active .nav-link {
+    border-color: var(--clr-border);
   }
 
   .LocationAndTime--subtitle-wrapper--6yH0n time,
@@ -161,14 +171,22 @@
     color: var(--clr-text);
   }
 
+  .CollapsibleSection--subsection--S7K8c .CollapsibleSection--dark--RJ5au,
   .ActivityEntryBody--activity-entry-container--iYy-k
-    .ActivityEntryBody--stats--G90hq {
+    .ActivityEntryBody--stats--G90hq,
+  .Stat--stat--AaawC .Stat--stat-label--RZ\+S4 {
     color: var(--clr-text--light);
   }
 
   .AthleteJoinEntry--entry-header--O4VRu,
   .AthleteJoinEntry--entry-body--qn4Rv {
     color: var(--clr-text--light);
+  }
+
+  .CreatePost--input-wrapper--ZR739 label,
+  .Post--author-name--6nfjJ,
+  .Comment--author-name--EHv8e {
+    color: var(--clr-text--medium);
   }
 
   .card,
@@ -189,7 +207,7 @@
   .MaharajAchievementCelebration--achievement-celebration--ouMf5 {
     background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: var(--clr-border);
   }
 
   /* Avatar */
@@ -201,8 +219,42 @@
     fill: var(--clr-bg);
   }
 
-  .AvatarGroup--avatar--8ZPsx {
+  .AvatarGroup--avatar--8ZPsx,
+  .Facepile--avatar-img--rr1lE {
     border-color: var(--clr-bg);
+  }
+
+  /* Leaderboard */
+  .Leaderboard--container--PJWVx .Leaderboard--privacy-section--PTdz2,
+  div[data-reach-tab-list] {
+    background-color: var(--clr-bg--content);
+  }
+
+  .CategoryTabs--container--KjQZu [data-reach-tab] {
+    border-color: transparent;
+  }
+
+  .CategoryTabs--container--KjQZu [data-reach-tab][data-selected] {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    border-top-color: transparent !important;
+  }
+
+  /* Comments */
+  .ActionsDropdown--more-icon--7I3zP:after {
+    filter: invert(1);
+  }
+
+  .CreateComment--container--cE0tC textarea,
+  .CreatePost--container--TnszW textarea {
+    background-color: var(--clr-bg--content);
+    border-color: var(--clr-border);
+    color: var(--clr-text);
+  }
+
+  .CreatePost--container--TnszW textarea:focus,
+  .CreateComment--container--cE0tC textarea:focus {
+    background-color: var(--clr-bg--content);
   }
 
   /* Lines */
@@ -213,8 +265,51 @@
     .ActivityEntryBody--stats--G90hq
     > li,
   .KudosAndComments--kudos-and-comments--RTN8b.KudosAndComments--hairline--n9t8k,
-  .AthleteJoinEntry--media--kEDKw {
-    border-color: rgba(255, 255, 255, 0.2);
+  .AthleteJoinEntry--media--kEDKw,
+  .Show--top-row--siFxa,
+  .CollapsibleSection--line--Gjb6T {
+    border-color: var(--clr-border);
+  }
+
+  /* Profile */
+  #header-photos ul a,
+  #header-photos ul a,
+  .profile-heading .avatar img {
+    border-color: var(--clr-border);
+  }
+
+  .avatar-athlete img,
+  .avatar-athlete .avatar-img {
+    background-color: var(--clr-bg--content);
+  }
+
+  /*
+  ┌──────────────────────────────────┐
+    TABLES
+  └──────────────────────────────────┘
+  */
+
+  .LeaderboardsTable--table-container--JxwWf
+    .LeaderboardsTable--table--zBtJE
+    th,
+  .LeaderboardsTable--table-container--JxwWf
+    .LeaderboardsTable--table--zBtJE
+    tr.LeaderboardsTable--leaderboard-entry--ydqYD {
+    border-color: var(--clr-border);
+  }
+
+  .Leaderboard--container--PJWVx
+    .Leaderboard--avatar-and-name-container--PqA52
+    .Leaderboard--details--iggfk
+    .Leaderboard--name--nNWT5
+    a {
+    color: var(--clr-text--light);
+  }
+
+  .LeaderboardsTable--table-container--JxwWf
+    .LeaderboardsTable--table--zBtJE
+    tr.LeaderboardsTable--leaderboard-entry--ydqYD {
+    color: var(--clr-text--medium);
   }
 
   /*
@@ -353,7 +448,32 @@
 
   .Button--primary--x47Uv {
     border-color: var(--clr-primary);
-    background-color: transparent;
-    color: var(--clr-primary);
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+  }
+
+  .Button--primary-outline--ezOQK {
+    border-color: var(--clr-primary);
+    color: var(--clr-text);
+  }
+
+  /*
+  ┌──────────────────────────────────┐
+    FOOTER
+  └──────────────────────────────────┘
+  */
+
+  footer {
+    border-color: var(--clr-border);
+  }
+
+  .footer-promos {
+    background-color: var(--clr-bg--content2);
+  }
+
+  .footer-global,
+  .footer-global a,
+  .footer-promos .promo a {
+    color: var(--clr-text--light);
   }
 }
