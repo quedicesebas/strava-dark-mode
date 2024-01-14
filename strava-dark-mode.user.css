@@ -167,9 +167,7 @@
   .Activity--card--GP9rq a:not(.Activity--btn--0fOye):visited,
   .Activity--card--GP9rq .Activity--btn--0fOye.Activity--btn-link--JK2Iw:link,
   .Activity--card--GP9rq
-    .Activity--btn--0fOye.Activity--btn-link--JK2Iw:visited,
-  .\------packages-ui-Card-Card-module__card--nHcH9,
-  .\------packages-feed-ui-src-components-media-Card-Card__card--dkL_L {
+    .Activity--btn--0fOye.Activity--btn-link--JK2Iw:visited {
     color: var(--clr-text);
   }
 
@@ -195,9 +193,8 @@
   .Activity--card--GP9rq,
   .GroupActivity--card--oCRxr,
   .Card--card--8qT2W,
-  .AthleteJoinEntry--card---CeVY,
-  .\------packages-ui-Card-Card-module__card--nHcH9,
-  .\------packages-feed-ui-src-components-media-Card-Card__card--dkL_L {
+  .AthleteJoinEntry--card---CeVY,  
+  div[class*="__card--"] {
     background-color: var(--clr-bg--content);
     background-image: linear-gradient(
       to bottom,
@@ -215,7 +212,9 @@
   }
 
   /* Avatar */
-  .EntryHeader--icon-container--f6C3J {
+  .EntryHeader--icon-container--f6C3J,
+  div[class*="HeaderWithOwnerMetadata-HeaderWithOwnerMetadata-module__iconContainer--"]
+  {
     background-color: transparent;
   }
 
@@ -374,6 +373,10 @@
   .tab-contents,
   .tab-contents > div {
     background-color: var(--clr-navigation);
+  }
+
+  button[class*="__tab--"][aria-selected=true] {
+    background-color: var(--clr-bg--content) !important;
   }
 
   /*
