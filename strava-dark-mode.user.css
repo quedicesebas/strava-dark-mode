@@ -167,7 +167,8 @@
   .Activity--card--GP9rq a:not(.Activity--btn--0fOye):visited,
   .Activity--card--GP9rq .Activity--btn--0fOye.Activity--btn-link--JK2Iw:link,
   .Activity--card--GP9rq
-    .Activity--btn--0fOye.Activity--btn-link--JK2Iw:visited {
+    .Activity--btn--0fOye.Activity--btn-link--JK2Iw:visited,
+  .\------packages-ui-Card-Card-module__card--nHcH9 {
     color: var(--clr-text);
   }
 
@@ -193,7 +194,8 @@
   .Activity--card--GP9rq,
   .GroupActivity--card--oCRxr,
   .Card--card--8qT2W,
-  .AthleteJoinEntry--card---CeVY {
+  .AthleteJoinEntry--card---CeVY,
+  .\------packages-ui-Card-Card-module__card--nHcH9 {
     background-color: var(--clr-bg--content);
     background-image: linear-gradient(
       to bottom,
