@@ -43,7 +43,6 @@
     background-color: var(--clr-bg--content);
     border-bottom: 0;
     margin-top: 0;
-    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
   }
 
   #global-header .nav-group .drop-down-menu .selection {
@@ -182,12 +181,6 @@
   .AthleteJoinEntry--card---CeVY,  
   div[class*="__card--"] {
     background-color: var(--clr-bg--content);
-    background-image: linear-gradient(
-      to bottom,
-      var(--clr-bg--content),
-      var(--clr-bg--content2)
-    );
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   }
 
   /* Archivements */
