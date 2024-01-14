@@ -16,10 +16,10 @@
 
   :root {
     --clr-bg: #121b20;
-    --clr-bg--content: #253640;
+    --clr-bg--content: #d3d1cd;
     --clr-bg--content2: #1c2830;
     --clr-primary: #fc5200;
-    --clr-text: #f1f7fb;
+    /*--clr-text: #f1f7fb;*/
     --clr-text--light: #94a3b8;
     --clr-text--medium: #64748b;
     --clr-navigation: #2e4450;
@@ -52,20 +52,6 @@
   }
 
   #global-header .nav-bar .nav-link {
-    color: var(--clr-text--light);
-  }
-
-  .drop-down-menu a,
-  .drop-down-menu .clickable,
-  .dropdown a,
-  .dropdown .clickable,
-  .ActivityEntryBody--activity-entry-container--iYy-k
-    .ActivityEntryBody--achievements-summary--bsU2g
-    li
-    strong,
-  #global-header .nav-group .drop-down-menu .selection,
-  .drop-down-menu .opt-group.premium a:link,
-  .drop-down-menu .opt-group.premium a:visited {
     color: var(--clr-text--light);
   }
 
@@ -423,6 +409,10 @@
     BUTTONS
   └──────────────────────────────────┘
   */
+
+  button[class*="__btn--"] {
+    background-color: transparent;
+  }
 
   .btn-white {
     border-color: var(--clr-text--medium);
